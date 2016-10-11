@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
 </head>
 <body>
 	<div class="container" ng-controller="AppCtrl">
@@ -21,10 +22,17 @@
 	          <th>&nbsp;</th>
 	        </tr>
 	      </thead>
+	      <tbody>
+	      	<tr ng-repeat="contact in contactlist">
+	      		<td>{{contact.name}}</td>
+	      		<td>{{contact.email}}</td>
+	      		<td>{{contact.number}}</td>
+	      	</tr>
+	      </tbody>
 	     </table>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-	<<script src="controller.js"></script>
+	<script src="controller.js"></script>
 </body>
 </html>
